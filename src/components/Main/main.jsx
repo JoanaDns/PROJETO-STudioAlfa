@@ -9,7 +9,7 @@ function Main(){
              
             <div className='hero-buttons'>
              <a href="#orcamento" className='btn-primary'>Peça um Orçamento!</a>
-             <a href="#portifolio" className='btn-primary'>Ver Portifólio!</a>
+             <a href="#portifolio" className='btn-secondary'>Ver Portifólio!</a>
             </div>
            
             <section className='Serviços'>
