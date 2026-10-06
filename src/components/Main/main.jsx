@@ -1,4 +1,12 @@
 import "./main.css";
+import ServicoCard from "../ServicoCard/servico";
+
+const servicos = 
+[ 
+{id: 1, icon:"🤢", titulo:"Design de Interface", descricion:"Telas claras, pensadas para usuário"},   
+{id: 2, icon:"😻", titulo:"Responsividade", descricion:"O mesmo site em qualquer tela"},
+{id: 3, icon:"👌", titulo:"Performece", descricion:"Páginas leves e processamento rápido"}    
+]
 
 function Main() {
   return (
@@ -18,29 +26,18 @@ function Main() {
             Ver Portifólio!
           </a>
         </div>
-      </section>
-
-      <section className="servico">
-        <h2>Nossos Serviços</h2>
-
-        <div className="servicos-grid">
-          <div className="servico-card">
-            <span>🤮</span>
-            <h3>Design de Interface</h3>
-            <p>Telas claras, pensadas para usuário</p>
-          </div>
-
-          <div className="servico-card">
-            <span>😍</span>
-            <h3>Responsividade</h3>
-            <p>O mesmo site em qualquer tela</p>
-          </div>
-
-          <div className="servico-card">
-            <span>👌</span>
-            <h3>Performece</h3>
-            <p>Páginas leves e processamento rápido</p>
-          </div>
+       </section>
+       <section className="servico">
+       <h2>Nossos Serviços</h2>
+       <div className="servicos-grid">
+        {servicos.map((Servico)=> (
+        <ServicoCard
+        key={Servico.id}
+        icon = {Servico.icon}
+        titulo = {Servico.titulo}
+        descricion = {Servico.descricion} 
+        />
+        ))}
         </div>
       </section>
     </main>
